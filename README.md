@@ -1,7 +1,7 @@
 # Teckblogy
 
 ## Description 
-Teckblogy also knows as Teck Blog is a plateform where coders share their codes, opinions and concerns
+Teckblogy, also known as Teck Blog, is a platform developed for coders to share their codes, opinions, concerns, etc.
 
 ## Features
 TO BE EDITED
