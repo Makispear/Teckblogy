@@ -9,14 +9,13 @@ router.get('/', (req, res) => {
             'id',
             'title',
             'content',
+            'user_id',
             'created_at'
         ],
-        include: [
-            {
-                model: 'user',
+        include: [{
+                model: User,
                 attributes: ['username']
-            }
-        ]
+        }]
     })
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({plain: true}))

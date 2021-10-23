@@ -3,18 +3,18 @@ const { Post } = require('../models');
 const postdata = [
   {
     title: 'Donec posuere metus vitae ipsum.',
-    content: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
-    user_id: 10
+    content: 'lorems sadfh sdfsadf jbsajdfn jbsdaj fbj',
+    user_id: 1
   },
   {
     title: 'Morbi non quam nec dui luctus rutrum.',
     content: 'https://nasa.gov/donec.json',
-    user_id: 8
+    user_id: 4
   },
   {
     title: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
     content: 'https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx',
-    user_id: 1
+    user_id: 2
   },
   {
     title: 'Nunc purus.',
@@ -44,7 +44,7 @@ const postdata = [
   {
     title: 'Duis ac nibh.',
     content: 'http://theguardian.com/dui/vel/nisl/duis/ac/nibh.aspx',
-    user_id: 9
+    user_id: 5
   },
   {
     title: 'Curabitur at ipsum ac tellus semper interdum.',
@@ -59,7 +59,7 @@ const postdata = [
   {
     title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
     content: 'http://networksolutions.com/nam/ultrices/libero/non/mattis/pulvinar.json',
-    user_id: 10
+    user_id: 8
   },
   {
     title: 'Donec dapibus.',
