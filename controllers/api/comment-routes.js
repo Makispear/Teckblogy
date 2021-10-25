@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   // check the session
+  console.log( "hit POST route for comments");
   if (req.session) {
     Comment.create({
       text: req.body.text,
