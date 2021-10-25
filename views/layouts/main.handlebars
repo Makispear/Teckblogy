@@ -10,11 +10,16 @@
 </head>
 
 <header class="hero">
-    <h1 class="app-title">The Tech Blog</h1>
+    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
     <ul>
-        <li><a class="nav-link" href="/">Home</a></li>
         <li><a class="nav-link" href="">Dashboard</a></li>
-        <li><a class="nav-link" href="">Logout</a></li>
+        {{#unless loggedIn}}
+        <li><a class="nav-link" href="/login">Login</a></li>
+        <li><a class="nav-link" href="/signup">Sign up</a></li>
+        {{/unless}}
+        {{#if loggedIn}}
+        <button id="logout-btn">logout</button>
+        {{/if}}
     </ul>
 </header>
 
@@ -22,5 +27,8 @@
     <main>
         {{{ body }}}
     </main>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 </html>

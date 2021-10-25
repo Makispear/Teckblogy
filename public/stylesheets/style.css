@@ -27,15 +27,24 @@ header ul {
 ul li {
     list-style: none;
     padding: 10px;
-} 
+}
 
 header ul li a {
-    color: rgb(204, 204, 204);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 .nav-link {
     margin: 0px 10px;
+}
+
+#logout-btn {
+    border: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* main  */
@@ -82,15 +91,28 @@ main .posts li {
     margin: 10px;
 }
 
-.title:hover {
-    background-color: rgb(15, 88, 110);
+.form-div {
+    padding: 10px;
+    font-size: 24px;
+}
+
+form {
+    margin: 30px 0;
+    width: 100%;
+    align-self: center;
 }
 
 textarea {
-    width: 100%;
+    min-width: 100%;
     min-height: 100px;
     text-align: start;
     padding: 5px;
+}
+
+
+.link {
+    color: rgb(10, 121, 34);
+    font-weight: bold;
 }
 
 .content {
@@ -104,4 +126,38 @@ form button {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+}
+
+.shadow-lg {
+    box-shadow: 10px 10px 20px rgb(20, 20, 20);
+}
+
+.comment-container {
+    min-width: 100%;
+    margin: 20px 0;
+    box-shadow: 10px 10px 20px rgb(20, 20, 20);
+}
+
+.comment-text {
+    background-color: rgb(199, 220, 231);
+    color: rgb(0, 0, 0);
+    padding: 25px;
+    line-height: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-end {
+    align-self: flex-end;
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    padding: 5px;
+}
+
+.single-comment {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 50px 0;
 }

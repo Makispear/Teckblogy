@@ -1,5 +1,5 @@
 {{> post-info post}}
-
+{{#if loggedIn}}
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -9,5 +9,30 @@
     <button type="submit">add comment</button>
   </div>
 </form>
+{{/if}}
 
-<script src="/javascript/single-post.js"></script>
+<h2 class="section-title">
+  Comments
+</h2>
+
+<div>
+  <section>
+  {{#each post.comments}}
+  <div class="single-comment">
+    <div class="comment-text">
+      {{text}}
+    </div>
+    <div class="flex-end">
+      {{user.username}} 
+      <span>
+        {{format_date created_at}}
+      </span>
+    </div>
+  </div>
+  {{/each}}
+  </section>
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
