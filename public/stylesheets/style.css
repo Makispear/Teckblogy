@@ -161,3 +161,13 @@ form button {
     flex-flow: column wrap;
     margin: 50px 0;
 }
+
+.new-post-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.input-sm {
+    padding: 5px;
+    width: 100%;
+}
