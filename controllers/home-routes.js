@@ -9,6 +9,9 @@ const login200Message = 'You are now logged in!'
 
 router.get('/', (req, res) => {
     Post.findAll({
+        order: [
+            ['created_at', 'DESC'],
+        ],
         attributes: [
             'id',
             'title',
@@ -79,6 +82,10 @@ router.get('/post/:id', (req, res) => {
 
 router.get('/signup', (req, res) => {
     res.render('signup')
+})
+
+router.get('/add-post', (req, res) => {
+    res.render('add-post')
 })
 
 router.get('/login', (req, res) => {

@@ -12,7 +12,9 @@
 <header class="hero">
     <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
     <ul>
+        {{#if loggedIn}}
         <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
+        {{/if}}
         {{#unless loggedIn}}
         <li><a class="nav-link" href="/login">Login</a></li>
         <li><a class="nav-link" href="/signup">Sign up</a></li>

@@ -48,6 +48,47 @@ router.get('/', (req, res) => {
   })
 })
 
+router.get('/edit/:id', (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: [
+      'id',
+      'title',
+      'content',
+      'created_at' 
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: [
+          'id',
+          'text',
+          'user_id',
+          'post_id',
+          'created_at'
+        ],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+  .then(dbPostData => {
+    if (!dbPostData) {
+      return res.status(404).json({message: post404Message})
+    }
+    const post = dbPostData.get({plain: true})
+    res.render('edit-post', {post, loggedIn: true})
+  })
+})
+
 
 
 module.exports = router

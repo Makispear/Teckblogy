@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3001;
 const sequelize = require('./config/connection');
 
 const session = require('express-session');
+const { max } = require('./models/user');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -21,6 +22,7 @@ const sess = {
     db: sequelize
   })
 };
+
 
 app.use(session(sess));
 
