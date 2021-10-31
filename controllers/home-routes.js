@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const sequelize = require('../config/connection')
 const { Post, User, Comment } = require('../models')
+const withAuth = require('../utils/auth')
 const post404Message = 'Post with this id not found'
 const username404Message = 'Username not found'
 const password400Message = 'Incorrect password!'
@@ -84,7 +85,7 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 })
 
-router.get('/add-post', (req, res) => {
+router.get('/add-post', withAuth, (req, res) => {
     res.render('add-post')
 })
 
@@ -92,7 +93,6 @@ router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         return res.redirect('/');
     }
-    
     res.render('login');
 });
 

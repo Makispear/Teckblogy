@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, Comment, User } = require('../models');
+const withAuth = require('../utils/auth');
 const post404Message = 'Post with this id not found'
 
 
@@ -48,7 +49,7 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
