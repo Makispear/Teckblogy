@@ -1,11 +1,12 @@
 const router = require('express').Router()
 const { User, Post, Comment } = require('../../models')
+const withAuth = require('../../utils/auth')
 const user404Message = 'User not found'
 const login200Message = 'Login successful'
 const password400Message = "incorrect password"
 
 // get all users 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     User.findAll({
         attributes: {
             exclude: ['password']
@@ -18,7 +19,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
     User.findOne({
         attributes: {
             exclude: ['password']
