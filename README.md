@@ -14,13 +14,13 @@ With an account you can:
 
 ## features available for signed up users
 * Create posts.
-![Add post](./public/images/addpost.js?raw=true)
+![Add post](./public/images/addpost.jpg?raw=true)
 * Edit posts
-![Edit post](./public/images/editbutton.js?raw=true)
+![Edit post](./public/images/editbutton.jpg?raw=true)
 * Delete posts
-![Delete post](./public/images/editpage.js?raw=true)
+![Delete post](./public/images/editpage.jpg?raw=true)
 * Add comments on posts 
-![Add comments](./public/images/typingcomment.js?raw=true)
+![Add comments](./public/images/typingcomment.jpg?raw=true)
 
 
 ## Links
@@ -29,9 +29,9 @@ With an account you can:
 - Link to [deployed Techblogy](https://teckblogy.herokuapp.com/)
 
 ## Other visuals
-![Add comments](./public/images/addedcomment.js?raw=true)
-![Add comments](./public/images/allposts.js?raw=true)
-![Add comments](./public/images/login.js?raw=true)
-![Add comments](./public/images/signup.js?raw=true)
+![Add comments](./public/images/addedcomment.jpg?raw=true)
+![Add comments](./public/images/allposts.jpg?raw=true)
+![Add comments](./public/images/login.jpg?raw=true)
+![Add comments](./public/images/signup.jpg?raw=true)
 
 ### &copy; Maki A. Maki 2021
