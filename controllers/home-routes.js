@@ -86,7 +86,7 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/add-post', withAuth, (req, res) => {
-    res.render('add-post')
+    res.render('add-post', {loggedIn: true})
 })
 
 router.get('/login', (req, res) => {
