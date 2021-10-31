@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 const post404Message = 'Post with this id not found'
 
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   Post.findAll({
     where: {
       // use the ID from the session

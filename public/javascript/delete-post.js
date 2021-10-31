@@ -5,18 +5,19 @@ async function deletePost(event) {
         window.location.toString().split('/').length - 1
     ]
 
-
-    const response = await fetch(`/api/posts/${id}`, {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
+    if (id) {
+        const response = await fetch(`/api/posts/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
         }
-    });
-
-    if (response.ok) {
-        document.location.replace('/dashboard');
-    } else {
-        alert(response.statusText);
     }
 }
   
